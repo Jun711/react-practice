@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Projects from './components/Projects';
+import Todos from './components/Todos';
 import AddProject from './components/AddProject';
 import $ from 'jquery';
 import uuid from 'uuid';
@@ -82,6 +83,8 @@ class App extends Component {
 
         <AddProject addProject={this.handleAddProject.bind(this)}/>
         <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
+        <hr />
+        <Todos todos={this.state.todos}/>
       </div>
     );
   }
