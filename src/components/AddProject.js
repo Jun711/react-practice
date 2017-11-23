@@ -22,10 +22,11 @@ class AddProject extends Component {
       this.setState({
         newProject: {
           title: this.refs.title.value,
-          cateogry: this.refs.category.value
+          category: this.refs.category.value
         }
       }, () => {
-        console.log('this.state: ', this.state);
+        // console.log('this.state: ', this.state)
+        this.props.addProject(this.state.newProject)
       })
     }
 
@@ -51,6 +52,7 @@ class AddProject extends Component {
               {categoryOptions}
             </select>
           </div>
+          <br />
           <input type="submit" value="Submit" />
         </form>
       </div>
